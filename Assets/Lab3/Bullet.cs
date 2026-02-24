@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class Bullet : MonoBehaviour
+{
+    public float speed = 15f;
+    public float lifeTime = 15f;
+
+    void Start()
+    {
+        Destroy(gameObject, lifeTime);
+    }
+
+    void Update()
+    {
+        transform.Translate(Vector3.up * speed * Time.deltaTime);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Meteor>() != null)
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
+}
