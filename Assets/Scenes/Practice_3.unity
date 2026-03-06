@@ -256,6 +256,57 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &297354024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297354026}
+  - component: {fileID: 297354025}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &297354025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297354024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831d4a272ddc83e4e9334163068a16eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  pools:
+  - tag: Bullet
+    prefab: {fileID: 1298690409755870641, guid: fbb526a468ba53f4a9a2dd584c34562e, type: 3}
+    size: 20
+  - tag: Meteor
+    prefab: {fileID: 6626288300556765082, guid: fdd09bd038e6e4a4caa17f02eaade0f5, type: 3}
+    size: 10
+--- !u!4 &297354026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297354024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.56557, y: -1.5004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745401989
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,3 +629,4 @@ SceneRoots:
   - {fileID: 745401991}
   - {fileID: 929639107}
   - {fileID: 1229550102}
+  - {fileID: 297354026}

@@ -19,6 +19,6 @@ public class FireController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        ObjectPooler.Instance.SpawnFromPool("Bullet", firePoint.position, firePoint.rotation);
     }
 }

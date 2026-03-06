@@ -3,12 +3,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 15f;
-    public float lifeTime = 15f;
-
-    void Start()
-    {
-        Destroy(gameObject, lifeTime);
-    }
 
     void Update()
     {
@@ -19,8 +13,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.GetComponent<Meteor>() != null)
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
         }
     }
 }

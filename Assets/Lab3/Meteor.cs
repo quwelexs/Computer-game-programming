@@ -8,8 +8,6 @@ public class Meteor : MonoBehaviour
     public void SetTarget(Vector3 playerPosition)
     {
         moveDirection = (playerPosition - transform.position).normalized;
-
-        Destroy(gameObject, 45f);
     }
 
     void Update()

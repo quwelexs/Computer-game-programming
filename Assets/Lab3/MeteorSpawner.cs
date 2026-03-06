@@ -19,7 +19,7 @@ public class MeteorSpawner : MonoBehaviour
         Vector2 randomCirclePoint = Random.insideUnitCircle.normalized * spawnRadius;
         Vector3 spawnPosition = new Vector3(randomCirclePoint.x, randomCirclePoint.y, 0f);
 
-        GameObject newMeteor = Instantiate(meteorPrefab, spawnPosition, Quaternion.identity);
+        GameObject newMeteor = ObjectPooler.Instance.SpawnFromPool("Meteor", spawnPosition, Quaternion.identity);
 
         Meteor meteorScript = newMeteor.GetComponent<Meteor>();
         if (meteorScript != null)
